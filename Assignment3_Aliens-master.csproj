@@ -52,6 +52,9 @@
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
@@ -66,6 +69,9 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
       <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
@@ -135,8 +141,10 @@
     <Compile Include="Assets\_Scripts\GameController.cs" />
     <Compile Include="Assets\_Scripts\GameControllerScore.cs" />
     <Compile Include="Assets\_Scripts\PlayerShooting.cs" />
+    <Compile Include="Assets\_Scripts\RestartController.cs" />
     <Compile Include="Assets\_Scripts\StartController.cs" />
     <Compile Include="Assets\_Scripts\TikkiController.cs" />
+    <Compile Include="Assets\_Scripts\TrollController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Earthborn Troll\Shader\Alpha_Texture.shader" />

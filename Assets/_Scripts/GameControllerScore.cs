@@ -13,8 +13,7 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-// reference to manage my scenes
-using UnityEngine.SceneManagement;
+
 
 
 /**  
@@ -29,10 +28,13 @@ public class GameControllerScore : MonoBehaviour
     // PRIVATE INSTANCE VARIABLES ++++++++++++++++++
     private int _livesValue;
     private int _scoreValue;
+	 float timeLeft = 100.0f;
+	public int LavelCount;
 
     [Header("UI Objects")]
     public Text LivesLabel;
     public Text ScoreLabel;
+	public Text TimeCounter;
 
     // PUBLIC PROPERTIES +++++++++++++++++++++++++++
     public int LivesValue
@@ -86,7 +88,7 @@ public class GameControllerScore : MonoBehaviour
     {
         this.LivesValue = 5;
         this.ScoreValue = 0;
-
+		this.LavelCount = 1;
     }
 
     /**
@@ -99,7 +101,21 @@ public class GameControllerScore : MonoBehaviour
         */
     void Update()
     {
+		Scene scene = SceneManager.GetActiveScene();
+
+		if (scene.name=="SecondLevel") {
+			timeLeft -= Time.deltaTime;
+			TimeCounter.text = "Time Left: " + this.timeLeft;
+			if (timeLeft <= 0) {
+				//GameOver();
+				SceneManager.LoadScene ("GameOver");
+			}
+		}
     }
 
+	void GameOver(){
+		SceneManager.LoadScene("GameOver");
+
+	}
 
 }

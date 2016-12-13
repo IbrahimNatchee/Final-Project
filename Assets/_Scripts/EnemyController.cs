@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour {
 
 	// PUBLIC INSTANCE VARIABLES
 	public UnityEngine.AI.NavMeshAgent Agent;
+	public bool Gothit;
 
 	// PRIVATE INSTANCE VARIABLES
 	private Transform Player;
@@ -21,10 +22,19 @@ public class EnemyController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		this.Player = GameObject.FindWithTag ("Player").transform;
+
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		this.Agent.SetDestination (this.Player.position);
+
+
+	
+	
 	}
+
+
+
 }
